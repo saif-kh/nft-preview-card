@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Outfit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: hsl(217, 54%, 11%);
+}
+
+.main-component {
+  width: 300px;
+  height: fit-content;
+  margin: auto;
+  background: hsl(216, 50%, 16%);
+  padding: 20px;
+  padding-bottom: 23px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 7px 30px hsl(214, 44%, 6%);
+}
+
+.pic-container {
+  object-fit: cover;
+  height: 260px;
+  position: relative;
+  border-radius: inherit;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: hsl(178, 100%, 50%);
+}
+
+.pic-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.view {
+  max-width: 50px;
+  aspect-ratio: 1;
+  position: absolute;
+  z-index: 10;
+  top: calc(50% - 20px);
+  left: calc(50% - 25px);
+  display: none;
+  pointer-events: none;
+}
+
+.pic-container:hover .view {
+  display: block;
+}
+.pic-container:hover {
+  cursor: pointer;
+}
+.pic-container:hover .pic {
+  opacity: 0.4;
+}
+
+/* hr {
+  width: 100%;
+  height: 0.5px;
+} */
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
+.nft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid hsl(215, 51%, 70%, 0.2);
+  padding-bottom: 1rem;
+}
+
+.cost,
+.days,
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.image {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+}
+
+.nums {
+  font-size: 17px;
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+}
+
+.days-text {
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.image img {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
+
+.circle {
+  background-color: white;
+  width: 27px;
+  height: 27px;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.creator-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.name {
+  color: white;
+}
+
+.title:hover,
+.name:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
